@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RYU-NA X AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dash">
+
+<div class="topbar">
+  <h2>Ryu-na X</h2>
+  <button onclick="logout()">Logout</button>
+</div>
+
+<div class="layout">
+
+  <!-- CHAT AREA -->
+  <div class="chat">
+
+    <div class="messages" id="messages">
+      <div class="ai">Hello Elvis 👋 I am Ryu-na X.</div>
+    </div>
+
+  </div>
+
+  <!-- SIDE PANEL -->
+  <div class="side">
+
+    <div class="history" id="history">
+      <h3>History</h3>
+    </div>
+
+    <div class="inputBox">
+      <input id="input" placeholder="Type message...">
+      <button onclick="send()">➤</button>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+
+<script>
+async function logout(){
+  await fetch("/api/logout",{method:"POST"});
+  location.href="landing.html";
+}
+</script>
+
+</body>
+</html>
