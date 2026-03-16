@@ -1,0 +1,162 @@
+body{
+  margin:0;
+  font-family:Segoe UI;
+  background:#050510;
+  color:white;
+}
+
+/* ===== HERO ===== */
+
+.hero{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  background:radial-gradient(circle,#1a0033,#000);
+}
+
+.hero-box{
+  text-align:center;
+}
+
+.logo{
+  font-size:70px;
+  margin-bottom:10px;
+}
+
+.title{
+  font-size:60px;
+  background:linear-gradient(90deg,#00eaff,#ff5c8a);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.subtitle{opacity:.8}
+.made{color:#ff5c8a}
+
+/* ===== BUTTONS ===== */
+
+.btn{
+  padding:14px 30px;
+  border-radius:40px;
+  border:none;
+  font-size:16px;
+  cursor:pointer;
+  margin:10px;
+}
+
+.primary{
+  background:#ff5c8a;
+  color:white;
+}
+
+.outline{
+  background:transparent;
+  border:2px solid #444;
+  color:white;
+}
+
+.btn:hover{transform:scale(1.05)}
+
+/* ===== AUTH PAGES ===== */
+
+.auth{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  background:radial-gradient(circle,#120024,#000);
+}
+
+.auth-card{
+  background:#0d0d1a;
+  padding:40px;
+  border-radius:20px;
+  width:320px;
+  text-align:center;
+  box-shadow:0 0 30px #6a00ff55;
+}
+
+.auth-card input{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:none;
+  border-radius:10px;
+  background:#15152a;
+  color:white;
+}
+
+.link{
+  display:block;
+  margin-top:10px;
+  color:#aaa;
+  text-decoration:none;
+}
+
+/* ===== DASHBOARD ===== */
+
+.topbar{
+  background:#0a0a16;
+  padding:10px 20px;
+  display:flex;
+  justify-content:space-between;
+}
+
+.layout{
+  display:flex;
+  height:calc(100vh - 50px);
+}
+
+/* CHAT */
+.chat{
+  flex:3;
+  padding:20px;
+  overflow-y:auto;
+}
+
+.messages div{
+  margin:10px 0;
+  padding:12px;
+  border-radius:12px;
+}
+
+.ai{background:#1b1b2f}
+.user{
+  background:#ff5c8a;
+  align-self:flex-end;
+}
+
+/* SIDE */
+.side{
+  flex:1;
+  background:#080812;
+  display:flex;
+  flex-direction:column;
+}
+
+.history{
+  flex:1;
+  padding:10px;
+  overflow-y:auto;
+  border-bottom:1px solid #222;
+}
+
+.inputBox{
+  display:flex;
+}
+
+.inputBox input{
+  flex:1;
+  padding:12px;
+  border:none;
+  background:#15152a;
+  color:white;
+}
+
+.inputBox button{
+  padding:12px;
+  background:#00eaff;
+  border:none;
+  cursor:pointer;
+}
