@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login — Ryu-na X</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="auth">
+
+<div class="auth-card">
+
+<h2>Login</h2>
+
+<input id="id" placeholder="User ID">
+<input id="pass" type="password" placeholder="Password">
+
+<button class="btn primary" onclick="login()">Enter AI Core</button>
+
+<a href="register.html" class="link">Create new account</a>
+
+</div>
+
+<script>
+async function login(){
+
+  const res = await fetch("/api/login",{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({
+      userId:id.value,
+      password:pass.value
+    })
+  });
+
+  const data = await res.json();
+
+  if(data.success)
+    location.href="dashboard.html";
+  else
+    alert("Invalid login");
+}
+</script>
+
+</body>
+</html>
